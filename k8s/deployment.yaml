@@ -15,7 +15,6 @@ spec:
     spec:
       containers:
         - name: app
-          # 👇 REMPLACE CECI PAR TON VRAI PSEUDO ET NOM DE REPO 👇
           image: ghcr.io/kaez/go-todo:latest
           ports:
-            - containerPort: 8080 # Le port de ton code Go
+            - containerPort: 8002
