@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-todo-svc
+  namespace: default
+spec:
+  selector:
+    app: go-todo-go
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: go-todo-ingress
+  namespace: default
+spec:
+  ingressClassName: nginx
+  rules:
+    # 👇 C'est l'URL que tu taperas dans ton navigateur
+    - host: go-todo.localhost
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: go-todo-svc
+                port:
+                  number: 80
