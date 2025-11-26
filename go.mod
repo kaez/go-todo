@@ -1,4 +1,4 @@
-module github.com/kaez/todo-api
+module github.com/kaez/go-todo
 
 go 1.25.3
 
