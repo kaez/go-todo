@@ -22,7 +22,7 @@ COPY --from=builder /app/todo-api .
 ENV PORT=8080
 ENV DB_PATH=/data/todos.db
 
-EXPOSE 8080
+EXPOSE 8082
 
 RUN mkdir -p /data
 
