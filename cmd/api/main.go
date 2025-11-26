@@ -8,9 +8,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/kaez/todo-api/internal/handlers"
-	"github.com/kaez/todo-api/internal/middleware"
-	"github.com/kaez/todo-api/internal/repository"
+	"github.com/kaez/go-todo/internal/handlers"
+	"github.com/kaez/go-todo/internal/middleware"
+	"github.com/kaez/go-todo/internal/repository"
 )
 
 func main() {

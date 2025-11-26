@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com/kaez/todo-api/internal/models"
+	"github.com/kaez/go-todo/internal/models"
 	_ "github.com/mattn/go-sqlite3"
 )
 

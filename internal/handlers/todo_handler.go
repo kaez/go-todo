@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/kaez/todo-api/internal/models"
-	"github.com/kaez/todo-api/internal/repository"
+	"github.com/kaez/go-todo/internal/models"
+	"github.com/kaez/go-todo/internal/repository"
 )
 
 type TodoHandler struct {

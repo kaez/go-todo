@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/kaez/todo-api/internal/repository"
+	"github.com/kaez/go-todo/internal/repository"
 )
 
 type HealthHandler struct {
