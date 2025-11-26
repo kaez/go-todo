@@ -14,7 +14,7 @@ import (
 )
 
 func main() {
-	port := getEnv("PORT", "8080")
+	port := getEnv("PORT", "8082")
 	dbPath := getEnv("DB_PATH", "./todos.db")
 
 	log.Printf("Starting Todo API on port %s", port)
