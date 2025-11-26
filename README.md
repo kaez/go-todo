@@ -2,6 +2,11 @@
 
 Une API REST simple pour gérer des tâches (todos), conçue pour être déployée sur Kubernetes.
 
+GO Code: IA
+Docerfile: IA
+github_action : kaez
+k8s: kaez
+
 ## Fonctionnalités
 
 - CRUD complet pour les todos
@@ -114,6 +119,7 @@ curl http://localhost:8080/metrics
 ```
 
 Métriques disponibles:
+
 - `http_requests_total` - Nombre total de requêtes HTTP
 - `todos_total` - Nombre total de todos
 - `go_memstats_alloc_bytes` - Mémoire allouée
@@ -122,6 +128,7 @@ Métriques disponibles:
 ## Déploiement sur Kubernetes
 
 Ce projet est prêt pour Kubernetes avec:
+
 - Health checks pour liveness et readiness probes
 - Métriques Prometheus pour le monitoring
 - Configuration via variables d'environnement
@@ -140,25 +147,25 @@ spec:
   template:
     spec:
       containers:
-      - name: todo-api
-        image: todo-api:latest
-        ports:
-        - containerPort: 8080
-        env:
-        - name: PORT
-          value: "8080"
-        livenessProbe:
-          httpGet:
-            path: /health/live
-            port: 8080
-          initialDelaySeconds: 5
-          periodSeconds: 10
-        readinessProbe:
-          httpGet:
-            path: /health/ready
-            port: 8080
-          initialDelaySeconds: 5
-          periodSeconds: 5
+        - name: todo-api
+          image: todo-api:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PORT
+              value: "8080"
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
 ```
 
 ## Structure du projet
