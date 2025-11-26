@@ -1,4 +1,4 @@
-module github.com/yourusername/todo-api
+module github.com/kaez/todo-api
 
 go 1.25.3
 
