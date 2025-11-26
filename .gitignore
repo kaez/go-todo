@@ -1,0 +1,5 @@
+*.db
+/data/
+/todo-api
+*.log
+.DS_Store

@@ -1,0 +1,6 @@
+*.db
+.git
+.gitignore
+README.md
+k8s/
+*.md
