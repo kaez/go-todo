@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   selector:
-    app: go-todo-go
+    app: go-todo
   ports:
     - protocol: TCP
       port: 80
