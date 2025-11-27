@@ -22,7 +22,7 @@ COPY --from=builder /app/go-todo .
 ENV PORT=8002
 ENV DB_PATH=/data/todos.db
 
-EXPOSE 8082
+EXPOSE 8002
 
 RUN mkdir -p /data
 
